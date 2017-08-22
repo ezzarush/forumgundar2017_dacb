@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Forum Gundar DACB 2017
 
 You can use the [editor on GitHub](https://github.com/ezzarush/forumgundar2017_dacb/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
