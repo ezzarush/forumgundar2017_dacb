@@ -103,9 +103,9 @@
 			action: 'modul/mod_profile/upload_profile.php',
 			name: 'uploadfile',
 			onSubmit: function(file, ext){
-				 if (! (ext && /^(jpg|jpeg)$/.test(ext))){
+				 if (! (ext && /^(jpg|jpeg|png)$/.test(ext))){
                     // extension is not allowed
-					mestatus.text('Only JPG file are allowed');
+					mestatus.text('Upload foto yang valid!');
 					return false;
 				}
 				mestatus.html('<img src="images/loader.gif" height="16" width="16">');
@@ -135,14 +135,14 @@ $data_profile = $db->database_fetch_array($db->database_prepare("SELECT * FROM a
 	<div class='main-column-left2'>
 		<div class='blog-style-2'>
 			<p style="font-size:18px; font-weight: bold;">Edit Profile</p>
-			<form method="POST" id="frm_profile" name="frm_profile" action="modul/mod_profile/action_update_profile.php">
+			<form class="form-group" method="POST" id="frm_profile" name="frm_profile" action="modul/mod_profile/action_update_profile.php">
 			<table width="100%">
 				<tr valign="top">
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;" width="130"><b>Upload Photo</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;" width="130"><b>Upload Foto</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
 						<div id="me" style="cursor:pointer; height: 40px; width: 72px;">
 							<label>
-								<button class="button_profile">Browse</button>
+								<button class="btn btn-info" style="color:white">Pilih gambar</button>
 							</label>
 						</div>
 						<span id="mestatus" ></span>
@@ -174,7 +174,6 @@ $data_profile = $db->database_fetch_array($db->database_prepare("SELECT * FROM a
 				}
 				else{
 				?>
-
 					<tr valign="top">
 						<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Username</b></td>
 						<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
@@ -188,49 +187,37 @@ $data_profile = $db->database_fetch_array($db->database_prepare("SELECT * FROM a
 				<tr>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Email</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<input type="text" id="email" placeholder="Your Email" value="<?php echo $data_profile['email']; ?>" name="email" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; height: 20px; width: 266px; margin-right: 10px; padding: 5px;" DISABLED>
+						<input type="text" id="email" placeholder="Email" value="<?php echo $data_profile['email']; ?>" name="email" class="form-control" DISABLED>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>First Name</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Nama Depan</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<input type="text" id="first_name" class="required" placeholder="First Name" value="<?php echo $data_profile['first_name']; ?>" name="first_name" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; height: 20px; width: 266px; margin-right: 10px; padding: 5px;">
+						<input type="text" id="first_name" placeholder="Nama depan" value="<?php echo $data_profile['first_name']; ?>" name="first_name" class="form-control">
 					</td>
 				</tr>
 				<tr>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Last Name</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Nama Belakang</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<input type="text" id="last_name" placeholder="Last Name" value="<?php echo $data_profile['last_name']; ?>" name="last_name" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; height: 20px; width: 266px; margin-right: 10px; padding: 5px;">
+						<input type="text" id="last_name" placeholder="Nama Belakang" value="<?php echo $data_profile['last_name']; ?>" name="last_name" class="form-control">
 					</td>
 				</tr>
 				<tr>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Phone/Cellphone</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>No Tlp/HP</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<input type="text" id="cellphone" placeholder="Phone or Cellphone" value="<?php echo $data_profile['cellphone']; ?>" name="cellphone" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; height: 20px; width: 266px; margin-right: 10px; padding: 5px;">
-					</td>
-				</tr>
-				<tr>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Hide Phone</b></td>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<input type="checkbox" id="hide_phone" placeholder="Phone or Cellphone" value="1" name="hide_phone" <?php if ($data_profile['hidden_cellphone'] == 1){ echo "CHECKED"; } ?>>
-					</td>
-				</tr>
-				<tr>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Yahoo Messenger ID</b></td>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<input type="text" id="ym_id" placeholder="Yahoo Messenger ID" value="<?php echo $data_profile['ym_id']; ?>" name="ym_id" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; height: 20px; width: 266px; margin-right: 10px; padding: 5px;">
+						<input type="text" id="cellphone" placeholder="No Telp/Hp" value="<?php echo $data_profile['cellphone']; ?>" name="cellphone" class="form-control">
 					</td>
 				</tr>
 				<tr valign="top">
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Address</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Alamat</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<textarea rows="3" id="address" class="required" placeholder="Address" name="address" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; width: 266px; margin-right: 10px; padding: 5px;"><?php echo $data_profile['address']; ?></textarea>
+						<textarea rows="3" id="address" placeholder="Alamat" name="address" class="form-control"><?php echo $data_profile['address']; ?></textarea>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Province</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Propinsi</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<select name="province" id="province" class="required" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; width: 266px; margin-right: 10px; padding: 5px;">
+						<select name="province" id="province" class="form-control">
 							<?php
 							$sql_province = $db->database_prepare("SELECT * FROM as_provinces WHERE status = 'Y' ORDER BY province_name ASC")->execute();
 							while ($data_province = $db->database_fetch_array($sql_province)){
@@ -245,42 +232,17 @@ $data_profile = $db->database_fetch_array($db->database_prepare("SELECT * FROM a
 						</select>
 					</td>
 				</tr>
-				<tr>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>City</b></td>
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<select name="city" id="city" class="required" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; width: 266px; margin-right: 10px; padding: 5px;">
-							<?php
-							if ($data_profile['city_id'] != ''){
-								$sql_city = $db->database_prepare("SELECT * FROM as_cities WHERE status = 'Y' AND province_id = ? ORDER BY city_name ASC")->execute($data_profile['province_id']);
-								while ($data_city = $db->database_fetch_array($sql_city)){
-									if ($data_city['city_id'] == $data_profile['city_id']){
-										echo "<option value='$data_city[city_id]' SELECTED>$data_city[city_name]</option>";
-									}
-									else{
-										echo "<option value='$data_city[city_id]'>$data_city[city_name]</option>";
-									}
-								}
-							}
-							else{
-								echo "<option value=''></option>";
-							}
-							?>
-						</select>
-					</td>
-				</tr>
 				<tr valign="top">
-					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Biography</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Bio</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<textarea rows="6" id="biografi" placeholder="Biography" name="biografi" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; width: 500px; margin-right: 10px; padding: 5px;"
-						OnFocus="Count();" OnClick="Count();" onKeydown="Count();" OnChange="Count();" onKeyup="Count();"><?php echo $data_profile['biografi']; ?></textarea>
-						<br>
-						<input name="counter" id="counter" type="text" size="5" value="500" style="background: #FFF; border: 1px solid #DDD; border-radius: 5px; box-shadow: 0 0 5px #DDD inset; color:#666; outline: none; width: 40px; margin-left: 410px; margin-top: 5px; padding: 5px;"> <b>Remain</b>
+						<textarea rows="4" id="biografi" placeholder="Biography" name="biografi" class="form-control"><?php echo $data_profile['biografi']; ?></textarea>
+
 					</td>
 				</tr>
 				<tr valign="top">
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<input type="submit" class="button_profile" value="SAVE" id="button_profile">
+						<input type="submit" class="btn btn-info" value="Simpan" id="button_profile">
 					</td>
 				</tr>
 			</table>

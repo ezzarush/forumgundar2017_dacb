@@ -61,11 +61,11 @@ jQuery(document).ready(function(){
 		$nm = md5(date('Ymdhis'));
 		$full_url = full_url();
 		if (strpos($full_url, "?succ=ok") == TRUE){
-			echo "<div class='messagesuccess' style='width: auto;'><p><b>Your message has been sent.</b></p></div>";
+			echo "<div class='messagesuccess' style='width: auto;'><p><b>Pesan Terkirim.</b></p></div>";
 		}
 		
 		if (strpos($full_url, "?succ=sent") == TRUE){
-			echo "<div class='messagesuccess' style='width: auto;'><p><b>Your message has been sent.</b></p></div>";
+			echo "<div class='messagesuccess' style='width: auto;'><p><b>Pesan Telah Dihapus.</b></p></div>";
 		}
 		$db->database_prepare("UPDATE as_frm_messages SET status = 1 WHERE message_id = ?")->execute($_GET["id"]);
 		$num_messages_inbox = $db->database_num_rows($db->database_prepare("SELECT * FROM as_frm_messages WHERE sendto = ? AND status = 0")->execute($_SESSION["member_login"]));
@@ -76,15 +76,16 @@ jQuery(document).ready(function(){
 		<div id="rotator2">  
 			
 			<ul class="ui-tabs-nav">  
-			    <li <?php if ($_GET['div'] == 1){ echo "class='ui-tabs-selected1'"; } else { echo "class='ui-tabs-nav-item1'"; } ?>><a href="messages-1-1.html" class='black'><span>Inbox (<?php if ($num_messages_inbox > 0){ echo "<b>$num_messages_inbox</b>"; } else{ echo "0"; } ?> of <?php echo $num_messages_inbox_all; ?>)</span></a></li>  
-			    <li <?php if ($_GET['div'] == 2){ echo "class='ui-tabs-selected2'"; } else { echo "class='ui-tabs-nav-item2'"; } ?>><a href="messages-2-1.html" class='black'><span>Sentitems (<?php if($num_messages_sentitem > 0){ echo "$num_messages_sentitem"; } else{ echo "0"; } ?>)</span></a></li>
+			    <li <?php if ($_GET['div'] == 1){ echo "class='ui-tabs-selected1'"; } else { echo "class='ui-tabs-nav-item1'"; } ?>><a href="messages-1-1.html" class='black'><span> Pesan Masuk (<?php if ($num_messages_inbox > 0){ echo "<b>$num_messages_inbox</b>"; } else{ echo "0"; } ?> of <?php echo $num_messages_inbox_all; ?>)</span></a></li> 
+
+			    <li <?php if ($_GET['div'] == 2){ echo "class='ui-tabs-selected2'"; } else { echo "class='ui-tabs-nav-item2'"; } ?>><a href="messages-2-1.html" class='black'><span> Pesan Terkirim (<?php if($num_messages_sentitem > 0){ echo "$num_messages_sentitem"; } else{ echo "0"; } ?>)</span></a></li>
 			</ul>
 			
 			<div id="fragment-1" class="ui-tabs-panel">
 			<table>
 				<tr>
 					<td><a href='messages-<?php echo $_GET['div']; ?>-1.html' class='black'><img src='images/back.jpg' width='30'></a></td>
-					<td><a href='messages-<?php echo $_GET['div']; ?>-1.html' class='black'>Back to Messages</a></td>
+					<td><a href='messages-<?php echo $_GET['div']; ?>-1.html' class='black'>Kembali</a></td>
 				</tr>
 			</table>
 			<?php
@@ -126,7 +127,7 @@ jQuery(document).ready(function(){
 		    	<input type='hidden' id='subject' name='subject' value='<?php echo $data_messages['subject']; ?>'>
 				<input type='hidden' id='old_msg' name='old_msg' value="<?php echo htmlspecialchars_decode($data_messages['message']); ?>">
    				<textarea id='msg' name='msg' cols='40'></textarea><br>
-   				<button id='send' type="submit">Send Message</button>
+   				<button id='send' type="submit">Kirim Pesan</button>
 				<br>
 			<?php
 			}

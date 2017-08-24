@@ -135,7 +135,7 @@ $des_image = "";
 	  <div class="container">
 
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="home">Forumku</a>
+	      <a class="navbar-brand" href="home">Alumiku</a>
 	    </div>
 
 			<!-- cek login -->
@@ -163,10 +163,11 @@ $des_image = "";
 					<li><a href="home">Home <span class="sr-only">(current)</span></a></li>
 					<li><a href="profile.html">Profil</a></li>
 					<li><a href="all-categories.html">Kategori</a></li>
+					<li><a href="all-posts.html">Post</a></li>
 					<li><a href="messages-1-1.html" title="Messages">Pesan <span class="badge"><?php echo $num_messages_new; ?></span></a></li>
 					<li><a href="logout.php" title="Sign Out">Sign Out</a></li>
 					<div id="conteactinfo2">
-						<a href="add-new-post.html"><button type="button" class="btn btn-primary">Tambah Post</button></a>
+						<a href="add-new-post.html"><button type="button" class="btn btn-primary">Tambah Topik</button></a>
 					</div>
 				</ul>
 				<div class="navbar-form navbar-right " role="search">
@@ -191,10 +192,11 @@ $des_image = "";
 			} else {
 			?>
 
+			<!--navigasi belum login -->
 			<div>
 				<ul class="nav navbar-nav">
-					<li><a href="sign-in.html">Login <span class="sr-only">(current)</span></a></li>
 					<li><a href="sign-up.html">Daftar</a></li>
+					<li><a href="sign-in.html">Login <span class="sr-only">(current)</span></a></li>
 					<li><a href="all-categories.html">Kategori</a></li>
 				</ul>
 				<div class="navbar-form navbar-right " role="search">
@@ -207,12 +209,12 @@ $des_image = "";
 							<input type="hidden" name="pid" value="<?php if ($_GET['pid'] != 0){ echo $_GET['pid']; } else{ echo "0"; } ?>" />
 							<input type="hidden" name="cat" value="<?php if ($_GET['cat'] != 0){ echo $_GET['cat']; } else{ echo "0"; } ?>" />
 							<input type="hidden" name="nm" value="<?php echo md5(date('Ymdhis')); ?>" />
-							<input class="form-control" type="text" name="q" placeholder="Search post here...">
+							<input class="form-control" type="text" name="q" placeholder="Cari Post Di Sini...">
 							<input class="btn btn-primary" type="submit" value="Cari">
 						</div>
 					</form>
 				</div>
-			</div>
+			</div> <!--end navigasi-->
 
 			<?php
 			}
@@ -284,7 +286,7 @@ $des_image = "";
 
 <!-- COPYRIGHT -->
 <div id="copyright" class="clear">
-	<p><br><strong><a href="dududud.com">Forum Alumni</a></strong></p>
+	<p><br> <strong><a href="http://smktjptuban.sch">Alumni SMK TJP Tuban</a></strong></p>
 </div>
 
 </div>

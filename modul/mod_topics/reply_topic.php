@@ -11,7 +11,7 @@ if ($_SESSION['email_login'] != ''){
 		$created_date = date('Y-m-d H:i:s');
 		$comment = htmlspecialchars($_POST["description"]);
 		$infosave = md5($created_date);
-		
+
 		$db->database_prepare("INSERT INTO as_comments (	topic_id,
 															member_id,
 															description,
