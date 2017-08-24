@@ -37,6 +37,7 @@ $des_image = "";
 	<link rel="icon" type="image/png" href="images/myicon.png" />
 
 	<link rel="stylesheet" href="css/flatui.min.css" type="text/css" />
+    
 	<link rel="stylesheet" href="css/layout.css" type="text/css" />
 	<link rel="stylesheet" href="css/paging.css" type="text/css" />
 	<link rel="stylesheet" href="css/forum_navigation.css" type="text/css" />

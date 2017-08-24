@@ -20,5 +20,11 @@ RewriteRule ^sign-out\.html$ master.php?module=sign_out [L]
 RewriteRule ^profile-(.*)-(.*)\.html$ master.php?module=profile_member&id=$1&title=$2 [L]
 RewriteRule ^read-messages-([0-9])-(.*)\.html$ master.php?module=read-messages&div=$1&id=$2 [L]
 
+#ADMIN ROUTE
+RewriteRule ^admin$ modul/mod_admin/index.php [L]
+RewriteRule ^adminlogin$ modul/mod_admin/login.php [L]
+RewriteRule ^logout$ modul/mod_admin/logout.php [L]
+RewriteRule ^login_proses$ modul/mod_admin/login_proses.php [L]
+
 Options All -Indexes
 </IfModule>
