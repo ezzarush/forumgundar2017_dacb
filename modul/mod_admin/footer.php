@@ -212,9 +212,6 @@
 </script>
 <!-- Bootstrap 3.3.6 -->
 <script src="<?=$app_path.'css/template/';?>bootstrap/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="<?=$app_path.'css/template/';?>plugins/morris/morris.min.js"></script>
 <!-- Sparkline -->
 <script src="<?=$app_path.'css/template/';?>plugins/sparkline/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
@@ -235,9 +232,22 @@
 <script src="<?=$app_path.'css/template/';?>plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="<?=$app_path.'css/template/';?>dist/js/app.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?=$app_path.'css/template/';?>dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?=$app_path.'css/template/';?>dist/js/demo.js"></script>
+<!-- DataTables -->
+<script src="<?=$app_path.'css/template/';?>plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?=$app_path.'css/template/';?>plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    
+    $(document).ready(function(){
+        function hapusKategory(){
+            alert("ea");
+        }  
+    })
+      
+  });
+</script>
 </body>
 </html>

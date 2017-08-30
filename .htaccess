@@ -26,5 +26,9 @@ RewriteRule ^adminlogin$ modul/mod_admin/login.php [L]
 RewriteRule ^logout$ modul/mod_admin/logout.php [L]
 RewriteRule ^login_proses$ modul/mod_admin/login_proses.php [L]
 
+RewriteRule ^kategori$ modul/mod_admin_kategori/kategori.php?mode=list [L]
+RewriteRule ^kategori/editKategori/(.*)$ modul/mod_admin_kategori/kategori.php?mode=edit&id=$1 [L]
+RewriteRule ^kategori/tambahkategori$ modul/mod_admin_kategori/kategori.php?mode=add [L]
+
 Options All -Indexes
 </IfModule>

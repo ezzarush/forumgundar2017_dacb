@@ -31,7 +31,6 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
-        
         <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i> <span>Manajemen Kategori</span>
@@ -40,11 +39,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 1</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 2</a></li>
+            <li><a href="<?=$app_path.'kategori/tambahkategori';?>"><i class="fa fa-circle-o"></i> Tambah Kategori</a></li>
+            <li><a href="<?=$app_path.'kategori';?>"><i class="fa fa-circle-o"></i> Daftar Kategori</a></li>
           </ul>
         </li>
-          
         <li class="treeview">
           <a href="#">
             <i class="fa fa-comments"></i> <span>Manajemen Topik</span>

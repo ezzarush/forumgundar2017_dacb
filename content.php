@@ -9,6 +9,10 @@ else{
 		include "modul/mod_home/home.php";
 	}
 
+    elseif ($_GET['module'] == 'admin'){
+		include "modul/mod_topics/add_new_topic.php";
+	}
+    
 	elseif ($_GET['module'] == 'add-new-post'){
 		include "modul/mod_topics/add_new_topic.php";
 	}
