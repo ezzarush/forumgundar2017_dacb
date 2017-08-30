@@ -22,7 +22,7 @@ if (move_uploaded_file($_FILES['catFile']['tmp_name'], $target_file)) {
     }else{
         $db->database_prepare("UPDATE as_frm_categories SET category_name='$cat_name', category_seo='$cat_seo', image='$filename', status='$cat_status', description='$cat_description',modified_date='$date',modified_userid='$userid' WHERE frm_category_id='$mode'")->execute();
     }
-    header('Location: '.$app_path.'adminlogin');
+    header('Location: '.$app_path.'kategori');
 }
     
 ?>

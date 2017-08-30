@@ -51,8 +51,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 1</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 2</a></li>
+            <li><a href="<?=$app_path.'topik/tambahtopik';?>"><i class="fa fa-circle-o"></i> Tambah Topik</a></li>
+            <li><a href="<?=$app_path.'topik';?>"><i class="fa fa-circle-o"></i> Daftar Topik</a></li>
           </ul>
         </li>
 

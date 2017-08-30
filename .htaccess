@@ -26,9 +26,15 @@ RewriteRule ^adminlogin$ modul/mod_admin/login.php [L]
 RewriteRule ^logout$ modul/mod_admin/logout.php [L]
 RewriteRule ^login_proses$ modul/mod_admin/login_proses.php [L]
 
+#ADMIN KATEGORI
 RewriteRule ^kategori$ modul/mod_admin_kategori/kategori.php?mode=list [L]
 RewriteRule ^kategori/editKategori/(.*)$ modul/mod_admin_kategori/kategori.php?mode=edit&id=$1 [L]
 RewriteRule ^kategori/tambahkategori$ modul/mod_admin_kategori/kategori.php?mode=add [L]
+
+#ADMIN TOPIK
+RewriteRule ^topik$ modul/mod_admin_topik/topik.php?mode=list [L]
+RewriteRule ^topik/editTopik/(.*)$ modul/mod_admin_topik/topik.php?mode=edit&id=$1 [L]
+RewriteRule ^topik/tambahtopik$ modul/mod_admin_topik/topik.php?mode=add [L]
 
 Options All -Indexes
 </IfModule>
