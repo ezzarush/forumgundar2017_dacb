@@ -36,5 +36,10 @@ RewriteRule ^topik$ modul/mod_admin_topik/topik.php?mode=list [L]
 RewriteRule ^topik/editTopik/(.*)$ modul/mod_admin_topik/topik.php?mode=edit&id=$1 [L]
 RewriteRule ^topik/tambahtopik$ modul/mod_admin_topik/topik.php?mode=add [L]
 
+#ADMIN TOPIK
+RewriteRule ^pengguna$ modul/mod_admin_pengguna/pengguna.php?mode=list [L]
+RewriteRule ^pengguna/editPengguna/(.*)$ modul/mod_admin_pengguna/pengguna.php?mode=edit&id=$1 [L]
+RewriteRule ^pengguna/tambahPengguna$ modul/mod_admin_pengguna/pengguna.php?mode=add [L]
+
 Options All -Indexes
 </IfModule>

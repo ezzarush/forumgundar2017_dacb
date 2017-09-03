@@ -47,7 +47,7 @@
                     <tr role="row" class="odd">
                       <td class="sorting_1"><?=$num;?></td>
                       <td>
-                          <a href="<?=$app_path.'topik/editTopik/1';?>" class="btn btn-block btn-info btn-sm">Edit</a>
+                          <a href="<?=$app_path.'topik/editTopik/'.$row['topic_id'];?>" class="btn btn-block btn-info btn-sm">Edit</a>
                           <a href="#" onclick="hapusTopik(<?=$row['topic_id'];?>)" class="btn btn-block btn-danger btn-sm">Delete</a>
                       </td>
                       <td><?=$row['title'];?></td>
@@ -93,11 +93,12 @@
   </div>
   <!-- /.content-wrapper -->
 <script>
-        function hapusKategory(param){
-            var x = confirm("Delete Category "+param+"?");
+        function hapusTopik(param){
+            var x = confirm("Delete Topic "+param+"?");
             if(x){
-                $.post("<?=$app_path.'modul/mod_admin_kategori/hapusKategori_act.php';?>",{id:param}).success(function(param){
-                    console.log(param);
+                $.post("<?=$app_path.'modul/mod_admin_topik/hapusTopik_act.php';?>",{id:param}).success(function(param){
+                    alert("Succeed Delete Topic "+param);
+                    location.reload();
                 })   
             }
         }

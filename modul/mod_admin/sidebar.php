@@ -64,8 +64,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 1</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Sub Menu 2</a></li>
+            <li><a href="<?=$app_path.'pengguna/tambahPengguna';?>"><i class="fa fa-circle-o"></i> Tambah Pengguna</a></li>
+            <li><a href="<?=$app_path.'pengguna';?>"><i class="fa fa-circle-o"></i> Daftar Pengguna</a></li>
           </ul>
         </li>
         

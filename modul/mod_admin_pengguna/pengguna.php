@@ -11,19 +11,19 @@ if(isset($_SESSION["isLogin"])){
     //Sidebar
     include('../mod_admin/sidebar.php');
     //Content
-    $category       = $db->database_prepare("SELECT * FROM as_frm_categories")->execute();
-    $sub_category   = $db->database_prepare("SELECT * FROM as_frm_categories")->execute();
+    $level       = $db->database_prepare("SELECT * FROM as_level")->execute();
+	
     if($mode=='add'){
-        include('formTopik.php');    
+        include('formPengguna.php');    
     }else if($mode=='edit'){
         $id = $_GET['id'];
-        $sql_topic  = $db->database_prepare("SELECT * FROM as_topics WHERE topic_id='$id'")->execute();
+        $sql_topic  = $db->database_prepare("SELECT * FROM as_users WHERE user_id='$id'")->execute();
         $data = $db->database_fetch_array($sql_topic);
-        include('formTopik.php');
+        include('formPengguna.php');
     }else{
         //Get All Kategori
-        $sql_topic  = $db->database_prepare("SELECT * FROM as_topics ORDER BY topic_id DESC")->execute();
-        include('daftarTopik.php');
+        $sql_topic  = $db->database_prepare("SELECT * FROM as_users ORDER BY user_id DESC")->execute();
+        include('daftarPengguna.php');
     }
     //Footer
     include('../mod_admin/footer.php');

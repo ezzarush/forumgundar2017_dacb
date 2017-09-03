@@ -48,7 +48,7 @@
                       <td><?=$row['status'];?></td>
                       <td><?=$row['description'];?></td>
                       <td>
-                          <a href="<?=$app_path.'kategori/editKategori/1';?>" class="btn btn-block btn-info btn-sm">Edit</a>
+                          <a href="<?=$app_path.'kategori/editKategori/'.$row['frm_category_id'];?>" class="btn btn-block btn-info btn-sm">Edit</a>
                           <a href="#" onclick="hapusKategory(<?=$row['frm_category_id'];?>)" class="btn btn-block btn-danger btn-sm">Delete</a>
                       </td>
                     </tr>

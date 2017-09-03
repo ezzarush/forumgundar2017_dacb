@@ -24,12 +24,12 @@
             <!-- /.box-header -->
             <!-- form start -->
             <form class="form-horizontal" action="<?=$app_path.'modul/mod_admin_topik/prosesTopik_act.php';?>" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="mode" value="<?=isset($data['frm_category_id'])?$data['frm_category_id']:0;?>">
+                <input type="hidden" name="mode" value="<?=isset($data['topic_id'])?$data['topic_id']:0;?>">
               <div class="box-body">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Topic Ref</label>
                   <div class="col-sm-8">
-                    <input type="text" required name="topic_ref" class="form-control" placeholder="Topic Ref" value="<?=isset($data['topic_ref'])?$data['topic_ref']:'';?>">
+                    <input type="number" required name="topic_ref" class="form-control" placeholder="Topic Ref" value="<?=isset($data['topic_ref'])?$data['topic_ref']:'';?>">
                   </div>
                 </div>
                 <div class="form-group">
@@ -50,8 +50,9 @@
                       <select class="form-control" name="topic_category">
                           <?php
                           while($row = $db->database_fetch_array($category)){
+                              $category_id = $row['frm_category_id'];
                             ?>
-                            <option value="Y" <?=isset($data['category_id'])?$data['category_id']=='Y'?'selected':'':'';?>><?=$row['category_name'];?></option>
+                            <option value="<?=$row['frm_category_id'];?>" <?=isset($data['category_id'])?$data['category_id']==$category_id?'selected':'':'';?>><?=$row['category_name'];?></option>
                             <?php
                           }
                           ?>
@@ -64,8 +65,9 @@
                       <select class="form-control" name="topic_sub_category">
                           <?php
                           while($row = $db->database_fetch_array($sub_category)){
+                              $subcategory_id = $row['frm_category_id'];
                             ?>
-                            <option value="Y" <?=isset($data['category_id'])?$data['category_id']=='Y'?'selected':'':'';?>><?=$row['category_name'];?></option>
+                            <option value="<?=$row['frm_category_id'];?>" <?=isset($data['category_id'])?$data['category_id']==$subcategory_id?'selected':'':'';?>><?=$row['category_name'];?></option>
                             <?php
                           }
                           ?>

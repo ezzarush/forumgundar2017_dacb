@@ -4,6 +4,6 @@ include('../../config/serverconfig.php');
 
 $id = $_POST['id'];
 
-$db->database_prepare("DELETE FROM as_frm_categories WHERE frm_category_id='$id'")->execute();
+$db->database_prepare("DELETE FROM as_topics WHERE topic_id='$id'")->execute();
 
 ?>

@@ -20,7 +20,7 @@ if(isset($_SESSION["isLogin"])){
         include('formKategori.php');
     }else{
         //Get All Kategori
-        $sql_topic  = $db->database_prepare("SELECT * FROM as_frm_categories")->execute();
+        $sql_topic  = $db->database_prepare("SELECT * FROM as_frm_categories ORDER BY frm_category_id DESC")->execute();
         include('daftarKategori.php');
     }
     //Footer
