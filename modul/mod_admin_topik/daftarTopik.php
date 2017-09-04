@@ -33,7 +33,6 @@
                     <th class="sorting" aria-controls="example1" aria-label="Browser: activate to sort column ascending">Title</th>
                     <th class="sorting" aria-controls="example1" aria-label="Platform(s): activate to sort column ascending">Title SEO</th>
                     <th class="sorting" aria-controls="example1" aria-label="Engine version: activate to sort column ascending">Category ID</th>
-                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">SubCategory ID</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Description</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Image</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Hits</th>
@@ -53,7 +52,6 @@
                       <td><?=$row['title'];?></td>
                       <td><?=$row['title_seo'];?></td>
                       <td><?=$row['category_id'];?></td>
-                      <td><?=$row['sub_category_id'];?></td>
                       <td><?=$row['description'];?></td>
                       <td><?=$row['image'];?></td>
                       <td><?=$row['hits'];?></td>
@@ -70,7 +68,6 @@
                     <th class="sorting" aria-controls="example1" aria-label="Browser: activate to sort column ascending">Title</th>
                     <th class="sorting" aria-controls="example1" aria-label="Platform(s): activate to sort column ascending">Title SEO</th>
                     <th class="sorting" aria-controls="example1" aria-label="Engine version: activate to sort column ascending">Category ID</th>
-                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">SubCategory ID</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Description</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Image</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Hits</th>
