@@ -208,6 +208,18 @@ $data_profile = $db->database_fetch_array($db->database_prepare("SELECT * FROM a
 						<input type="text" id="cellphone" placeholder="No Telp/Hp" value="<?php echo $data_profile['cellphone']; ?>" name="cellphone" class="form-control">
 					</td>
 				</tr>
+				<tr>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Jurusan</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
+						<input type="text" id="jurusan" placeholder="Jurusan" value="<?php echo $data_profile['jurusan']; ?>" name="jurusan" class="form-control">
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Tahun Lulusan</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
+						<input type="text" id="tahun_lulus" placeholder="Tahun Lulusan" value="<?php echo $data_profile['tahun_lulus']; ?>" name="tahun_lulus" class="form-control">
+					</td>
+				</tr>
 				<tr valign="top">
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Alamat</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
