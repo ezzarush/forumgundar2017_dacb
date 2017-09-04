@@ -33,12 +33,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Category SEO</label>
-                  <div class="col-sm-8">
-                    <input type="text" required name="catSeo" class="form-control" placeholder="Category Name" value="<?=isset($data['category_seo'])?$data['category_seo']:'';?>">
-                  </div>
-                </div>
-                <div class="form-group">
                   <label class="col-sm-2 control-label">Image</label>
                   <div class="col-sm-8">
                     <input type="file" required class="form-control" name="catFile" placeholder="Category Name">
