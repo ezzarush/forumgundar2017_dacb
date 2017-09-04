@@ -1,7 +1,6 @@
 <?php
-$data_profile = $db->database_fetch_array($db->database_prepare("SELECT * FROM as_member A
-																LEFT JOIN as_provinces B ON B.province_id = A.province_id
-																WHERE A.member_id = ?
+$data_profile = $db->database_fetch_array($db->database_prepare("SELECT * FROM as_member
+																WHERE member_id = ?
 											")->execute($_GET['id']));
 
 if ($data_profile['facebook_id'] != ''){

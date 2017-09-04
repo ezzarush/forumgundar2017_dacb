@@ -9,10 +9,6 @@ else{
 		include "modul/mod_home/home.php";
 	}
 
-    elseif ($_GET['module'] == 'admin'){
-		include "modul/mod_topics/add_new_topic.php";
-	}
-    
 	elseif ($_GET['module'] == 'add-new-post'){
 		include "modul/mod_topics/add_new_topic.php";
 	}
@@ -49,6 +45,10 @@ else{
 		include "modul/mod_profile/profile.php";
 	}
 
+	elseif ($_GET['module'] == 'edit_profil_admin'){
+		include "modul/mod_admin/edit_profil .php";
+	}
+
 	elseif ($_GET['module'] == 'edit_profile'){
 		include "modul/mod_profile/edit_profile.php";
 	}
@@ -63,6 +63,26 @@ else{
 
 	elseif ($_GET['module'] == 'send_message'){
 		include "modul/mod_topics/send_message.php";
+	}
+
+	else if ($_GET['module'] == 'login_admin'){
+		include "modul/mod_admin/login_admin.php";
+	}
+
+	else if ($_GET['module'] == 'admin'){
+		include "modul/mod_admin/index.php";
+	}
+
+	else if ($_GET['module'] == 'ubah_password'){
+		include "modul/mod_admin/ubah_password.php";
+	}
+
+	else if ($_GET['module'] == 'member'){
+		include "modul/mod_admin/member.php";
+	}
+
+	else if ($_GET['module'] == 'kelola_kategori'){
+		include "modul/mod_admin/kelola_kategori.php";
 	}
 
 	// READ MESSAGES

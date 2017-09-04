@@ -28,7 +28,7 @@ if ($_SESSION['email_login'] != ''){
 		$db->database_prepare("UPDATE as_member SET	photo = ?,
 													first_name = ?,
 													last_name = ?,
-													province_id = ?,
+													province_name = ?,
 													cellphone = ?,
 													address = ?,
 													biografi = ?,
@@ -49,7 +49,7 @@ if ($_SESSION['email_login'] != ''){
 
 		$db->database_prepare("UPDATE as_member SET	first_name = ?,
 													last_name = ?,
-													province_id = ?,
+													province_name = ?,
 													cellphone = ?,
 													address = ?,
 													biografi = ?,

@@ -106,8 +106,8 @@
 		<td valign="middle" style="padding: 20px; padding-top: 50px;">
 			<?php
 			$full_url = full_url();
-			if (strpos($full_url, "error=Error") == TRUE){
-				echo "<div class='messageerror'><p>Gagal: cek password atau email anda!</p></div>";
+			if (strpos($full_url, "error=Exist") == TRUE){
+				echo "<div class='messageerror'><p>Gagal: Email atau Username telah terdaftar!</p></div>";
 			}
 			?>
 			<form method="POST" id="frm_sign_up" action="action_sign_up.php" class="form-group">

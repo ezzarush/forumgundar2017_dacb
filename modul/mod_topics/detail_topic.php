@@ -3,11 +3,7 @@
 $aksi = "modul/mod_topics/reply_topic.php";
 $db->database_prepare("UPDATE as_topics SET hits=hits+1 WHERE topic_id = ?")->execute($_GET["id"]);
 $data_topic = $db->database_fetch_array($db->database_prepare("SELECT A.topic_ref, A.topic_id, A.title, A.title_seo, A.category_id, A.description, A.image as topicimage, A.hits, A.member_id,
-														B.email, B.username, B.photo, C.category_name, C.category_seo, A.created_date, B.created_date as join_date, D.province_name
-														FROM as_topics A INNER JOIN as_member B ON A.member_id = B.member_id
-														INNER JOIN as_frm_categories C ON C.frm_category_id = A.category_id
-														LEFT JOIN as_provinces D ON D.province_id=B.province_id
-														WHERE A.topic_id = ?")->execute($_GET["id"]));
+														B.email, B.username, B.photo, B.province_name, C.category_name, C.category_seo, A.created_date, B.created_date as join_date FROM as_topics A INNER JOIN as_member B ON A.member_id = B.member_id INNER JOIN as_frm_categories C ON C.frm_category_id = A.category_id WHERE A.topic_id = ?")->execute($_GET["id"]));
 $num_topic = $db->database_num_rows($db->database_prepare("SELECT * FROM as_topics WHERE member_id = ?")->execute($data_topic['member_id']));
 
 if ($data_topic['photo'] != ''){
@@ -18,7 +14,7 @@ else{
 }
 
 if ($data_topic['topicimage'] != ''){
-	$image_topic = "<img src='images/photo_topics/$data_topic[topicimage]' width='600'>";
+	$image_topic = "<img src='images/photo_topics/$data_topic[topicimage]'  height='200' class='media-object' >";
 }
 else{
 	$image_topic = "";
@@ -64,18 +60,22 @@ if (strpos($full_url, "?cp=no") == TRUE){
 					?>
 				</div>
 				<div class="col-md-10"><br>
-					<center><?php echo $image_topic; ?></center>
-					<p><?php echo $data_topic['description']; ?></p>
+					<center></center>
+					<div class="media">
+						<div class="media-left">
+							<?php echo $image_topic; ?>
+						</div>
+						<div class="media-body">
+							<p><?php echo $data_topic['description']; ?></p>
+						</div>
+					</div>
 				</div>
 			</div>
 	  </div>
 
 		<!-- fungsi panggil komentar -->
 		<?php
-		$sql_comment = $db->database_prepare("SELECT A.created_date, A.description, B.photo, B.username, B.member_id, C.province_name, B.created_date as join_date
-			FROM as_comments A INNER JOIN as_member B ON B.member_id=A.member_id
-			LEFT JOIN as_provinces C ON C.province_id = B.province_id
-			WHERE A.topic_id = ? ORDER BY A.created_date, A.comment_id DESC")->execute($data_topic['topic_id']);
+		$sql_comment = $db->database_prepare("SELECT A.created_date, A.description, B.photo, B.username, B.member_id, B.province_name, B.created_date as join_date FROM as_comments A INNER JOIN as_member B ON B.member_id=A.member_id	WHERE A.topic_id = ? ORDER BY A.created_date, A.comment_id DESC")->execute($data_topic['topic_id']);
 			while ($data_comment = $db->database_fetch_array($sql_comment)){
 				$num_topic2 = $db->database_num_rows($db->database_prepare("SELECT * FROM as_topics WHERE member_id = ?")->execute($data_comment['member_id']));
 				$tgl2 = explode(" ", $data_comment['created_date']);

@@ -18,7 +18,7 @@ if ($nums > 0){
 														photo,
 														first_name,
 														last_name,
-														province_id,
+														province_name,
 														cellphone,
 														address,
 														biografi,
@@ -44,6 +44,7 @@ if ($nums > 0){
 														"",
 														0);
 
-		header("Location: success.html");
+					header("Location: sign-in.html?signup=Success");
+
 }
 ?>

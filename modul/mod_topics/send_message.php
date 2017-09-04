@@ -52,7 +52,7 @@ $data_member = $db->database_fetch_array($db->database_prepare("SELECT member_id
 				<tr>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;" width="130"><b>Subjek <font color="#CC0000">*</font></b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;">
-						<input type="text" maxlength="255" id="subject" placeholder="Subject" name="subject" class="form-control required" width="50%">
+						<input type="text" maxlength="255" id="subject" placeholder="Subjek" name="subject" class="form-control required" width="50%">
 					</td>
 				</tr>
 				<tr valign="top">
@@ -64,7 +64,7 @@ $data_member = $db->database_fetch_array($db->database_prepare("SELECT member_id
 				<tr valign="top">
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;"><br>
-						<input type="submit" class="button_profile" value="SEND MESSAGE">
+						<input type="submit" class="button_profile" value="Kirim">
 					</td>
 				</tr>
 			</table>

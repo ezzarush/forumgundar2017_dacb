@@ -12,15 +12,15 @@ if ($_SESSION['email_login'] != ''){
 		$gbr_asli = imagecreatefromjpeg($file);
 		$lebar = imagesx($gbr_asli);
 		$tinggi = imagesy($gbr_asli);
-		
+
 		$tum_lebar = 150;
 		$tum_tinggi = 150;
-		
+
 		$gbr_thumb = imagecreatetruecolor($tum_lebar, $tum_tinggi);
 		imagecopyresampled($gbr_thumb, $gbr_asli, 0, 0, 0, 0, $tum_lebar, $tum_tinggi, $lebar, $tinggi);
-		
+
 		imagejpeg($gbr_thumb, "../../images/photo_topics/thumb/small_".$_POST['filename']);
-		
+
 		imagedestroy($gbr_asli);
 		imagedestroy($gbr_thumb);
 	}
@@ -55,7 +55,8 @@ if ($_SESSION['email_login'] != ''){
 													"",
 													0);
 	$insert = mysql_insert_id();
-	header("Location: ../../topic.html?save=ok?ref=".$ref_id);
+	// header("Location: ../../topic.html?save=ok?ref=".$ref_id);
+	header("Location: ../../all-posts.html");
 	} else {
 	header("Location: ../../add-new-post.html?err=fail");
 }

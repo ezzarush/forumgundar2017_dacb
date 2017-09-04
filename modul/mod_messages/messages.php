@@ -52,10 +52,10 @@
 			    <table border="0" width="100%" class="tr" cellspacing="0">
 			    	<tr bgcolor="#ccc">
 			    		<th style='padding: 5px;' width="5%" align="center"><input type='checkbox' name='allbox' value='check' onclick='checkAll(this);' /></th>
-			    		<th style='padding: 5px;' width="15%">Date</th>
-			    		<th style='padding: 5px;' width="15%">From</th>
-			    		<th style='padding: 5px;' width="45%">Subject</th>
-			    		<th style='padding: 5px;' width="10%" align="center">Action</th>
+			    		<th style='padding: 5px;' width="15%">Tanggal</th>
+			    		<th style='padding: 5px;' width="15%">Dari</th>
+			    		<th style='padding: 5px;' width="45%">Subjek</th>
+			    		<th style='padding: 5px;' width="10%" align="center">Aksi</th>
 			    	</tr>
 
 				<?php
@@ -157,10 +157,10 @@
 			    <table border="0" width="100%" class="tr" cellspacing="0">
 			    	<tr bgcolor="#ccc">
 			    		<th style='padding: 5px;' width="5%" align="center"><input type='checkbox' name='allbox' value='check' onclick='checkAll(this);' /></th>
-			    		<th style='padding: 5px;' width="15%">Date</th>
-			    		<th style='padding: 5px;' width="15%">To</th>
-			    		<th style='padding: 5px;' width="45%">Subject</th>
-			    		<th style='padding: 5px;' width="10%" align="center">Action</th>
+			    		<th style='padding: 5px;' width="15%">Tanggal</th>
+			    		<th style='padding: 5px;' width="15%">Kepada</th>
+			    		<th style='padding: 5px;' width="45%">Subjek</th>
+			    		<th style='padding: 5px;' width="10%" align="center">Aksi</th>
 			    	</tr>
 
 				<?php

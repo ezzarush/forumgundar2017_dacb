@@ -37,7 +37,6 @@ $des_image = "";
 	<link rel="icon" type="image/png" href="images/myicon.png" />
 
 	<link rel="stylesheet" href="css/flatui.min.css" type="text/css" />
-    
 	<link rel="stylesheet" href="css/layout.css" type="text/css" />
 	<link rel="stylesheet" href="css/paging.css" type="text/css" />
 	<link rel="stylesheet" href="css/forum_navigation.css" type="text/css" />
@@ -136,7 +135,7 @@ $des_image = "";
 	  <div class="container">
 
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="home">Alumiku</a>
+	      <a class="navbar-brand" href="home">Alumniku</a>
 	    </div>
 
 			<!-- cek login -->
@@ -166,9 +165,9 @@ $des_image = "";
 					<li><a href="all-categories.html">Kategori</a></li>
 					<li><a href="all-posts.html">Post</a></li>
 					<li><a href="messages-1-1.html" title="Messages">Pesan <span class="badge"><?php echo $num_messages_new; ?></span></a></li>
-					<li><a href="logout.php" title="Sign Out">Sign Out</a></li>
+					<li><a href="logout.php" title="Sign Out">Logout</a></li>
 					<div id="conteactinfo2">
-						<a href="add-new-post.html"><button type="button" class="btn btn-primary">Tambah Topik</button></a>
+						<a href="add-new-post.html"><button type="button" class="btn btn-primary">Buat Topik</button></a>
 					</div>
 				</ul>
 				<div class="navbar-form navbar-right " role="search">
@@ -193,10 +192,9 @@ $des_image = "";
 			} else {
 			?>
 
-			<!--navigasi belum login -->
 			<div>
 				<ul class="nav navbar-nav">
-					<li><a href="sign-up.html">Daftar</a></li>
+					<li><a href="sign-up.html">Buat Akun</a></li>
 					<li><a href="sign-in.html">Login <span class="sr-only">(current)</span></a></li>
 					<li><a href="all-categories.html">Kategori</a></li>
 				</ul>
@@ -215,7 +213,7 @@ $des_image = "";
 						</div>
 					</form>
 				</div>
-			</div> <!--end navigasi-->
+			</div>
 
 			<?php
 			}
@@ -229,29 +227,39 @@ $des_image = "";
 
 	<!-- info -->
 	<?php if ($_SESSION['email_login'] == ''): ?>
-		<div class="jumbotron">
-	  	<h1>Ayo daftar!</h1>
-	  	<p>Ayo daftar! biar makin seru, temukan teman baru, dan mulai diskusi seru! <a href="sign-up.html">Daftar sekarang juga!!</a>.</p>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="well">
+					<blockquote>
+					  <p>Setiap tempat adalah sekolah, setiap orang adalah guru dan setiap buku adalah ilmu.</p>
+					  <footer>Roem Topatimasang, <cite title="Source Title">Sekolah itu Candu</cite></footer>
+					</blockquote>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title">Informasi</h3>
+					</div>
+					<div class="panel-body">
+						Aluminku merupakan Portal Web forum khusus alumni SMK N 1 bla bla bla. cari tahu selengkapnya halaman <a href="#" class="alert-link">Tentang</a>. bingung dan butuh bantuan kunjungi halaman <a href="#" class="alert-link">Bantuan</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-warning">
+					<div class="panel-heading">
+						<h3 class="panel-title">Pengumuman</h3>
+					</div>
+						<div class="list-group">
+						  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+						  <a href="#" class="list-group-item">Morbi leo risus</a>
+						  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+						</div>
+				</div>
+			</div>
 		</div>
 	<?php endif ?>
-
-<!-- iklan -->
-<!-- <div class="panel panel-default">
-  <div class="panel-body">
-		<table align="center">
-			<tr>
-				<?php
-				// $sql_top_adv = $db->database_prepare("SELECT * FROM as_top_ads WHERE active = 'Y' ORDER BY rand() LIMIT 2")->execute();
-				// while($data_top_adv = $db->database_fetch_array($sql_top_adv)){
-				// 	echo "<td style='padding: 15px; margin: 10px; '><a href='modul/mod_home/b.php?u=$data_top_adv[url]&id=$data_top_adv[top_ads_id]' title='$data_top_adv[title]' target='_blank'>
-				// 	<img class='img-responsive' src='images/top_adv/$data_top_adv[image]'></a>
-				// 	</td>";
-				// }
-				?>
-			</tr>
-		</table>
-  </div>
-</div> -->
 
 <!-- kategori -->
 	<?php
@@ -286,11 +294,17 @@ $des_image = "";
 </div>
 
 <!-- COPYRIGHT -->
-<div id="copyright" class="clear">
-	<p><br> <strong><a href="http://smktjptuban.sch">Alumni SMK TJP Tuban</a></strong></p>
+<footer>
+	<div id="copyright" class="clear">
+		Coded with love by <strong><a href="http://jiwantoko.com">jiwantoko</a></strong>
+		<a href="#" class="pull-right alert-link" style="padding: 0px 5px">Bantuan</a>
+		<a href="#" class="pull-right alert-link" style="padding: 0px 5px">Tentang</a>
+		<a href="#" class="pull-right alert-link" style="padding: 0px 5px">Hubungi Kami</a>
+		<a href="#" class="pull-right alert-link" style="padding: 0px 5px">Syarat dan Ketentuan</a>
+	</div>
+</footer>
 </div>
 
-</div>
 
 
 </body>

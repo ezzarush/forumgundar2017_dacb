@@ -4,10 +4,18 @@
 		<td style="padding-left: 20px; padding-top: 50px; padding-right: 20px" width="45%" align="center" valign="top">
 			<div class="well"><br><br><br>Its Fast - Free - Fun<br><br><br><br></div>
 		</td>
-		
+
 		<td align="center" valign="top" style="padding-top: 120px;"><font color="#666">or</font> <br><div style="border-left: 1px solid rgba(0, 0, 0, 0.1); border-right: 1px solid rgba(255, 255, 255, 0.8); display: inline;"></div></td>
 		<td valign="top" style="padding: 20px; padding-top: 50px;">
 			<form method="POST" id="frm_sign_in" action="action_sign_in.php" class="form-group">
+			<?php
+			$full_url = full_url();
+			if (strpos($full_url, "error=Error") == TRUE){
+				echo "<div class='messageerror'><p>Gagal: cek password atau email anda!</p></div>";
+			} else if (strpos($full_url, "signup=Success") == TRUE) {
+				echo "<div class='messagesuccess'><p>Berhasil daftar: Silakan Login!</p></div>";
+			}
+			?>
 			<?php
 			if (strpos($full_url, "?frm=yes") == TRUE){
 				echo "<input type='hidden' name='iden' value='1'>";

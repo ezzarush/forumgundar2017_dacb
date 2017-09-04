@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(~E_ALL);
 include "config/class_database.php";
 include "config/serverconfig.php";
 
@@ -19,13 +19,12 @@ if ($nums > 0){
 	$_SESSION['ip_login'] = $ip;
 	$_SESSION['member_login'] = $data['member_id'];
 	$_SESSION['username'] = $data['username'];
-	$_SESSION['fb'] == "";
 
 	$db->database_prepare("UPDATE as_member SET last_login = ?, ip = ? WHERE email = ?")->execute($last_login,$ip,$_POST['email']);
 
 	header("Location: profile.html");
 }
 else{
-	header("Location: sign-in.html?err=error_log");
+		header("Location: sign-in.html?error=Error");
 }
 ?>

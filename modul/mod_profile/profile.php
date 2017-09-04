@@ -1,7 +1,6 @@
 <?php
-$data_profile = $db->database_fetch_array($db->database_prepare("SELECT * FROM as_member A
-																LEFT JOIN as_provinces B ON B.province_id = A.province_id
-																WHERE A.email = ?
+	$data_profile = $db->database_fetch_array($db->database_prepare("SELECT * FROM as_member
+																WHERE email = ?
 											")->execute($_SESSION['email_login']));
 
 if ($data_profile['facebook_id'] != ''){
@@ -19,7 +18,6 @@ if ($data_profile['facebook_id'] != ''){
 else{
 	$facebook_name = "-";
 }
-
 ?>
 <div class='main-column-wrapper'>
 	<div class='main-column-left2'>
@@ -64,6 +62,14 @@ else{
 				<tr valign="top">
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>No Telp/HP</b></td>
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;"><?php echo $data_profile['cellphone']; ?></td>
+				</tr>
+				<tr valign="top">
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Jurusan</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;"><?php echo $data_profile['jurusan']; ?></td>
+				</tr>
+				<tr valign="top">
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Tahun Lulus</b></td>
+					<td style="padding-bottom: 5px; padding-top: 5px; padding-right: 5px;"><?php echo $data_profile['tahun_lulus']; ?></td>
 				</tr>
 				<tr valign="top">
 					<td style="padding-bottom: 5px; padding-top: 5px; padding-left: 5px;"><b>Alamat</b></td>

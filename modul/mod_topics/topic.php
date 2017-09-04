@@ -26,13 +26,13 @@ while ($data_topics = $db->database_fetch_array($sql_topic)){
 	$sql_comment = $db->database_prepare("SELECT A.created_date, B.member_id, B.username FROM as_comments A LEFT JOIN as_member B ON B.member_id=A.member_id WHERE A.topic_id = ? ORDER BY A.created_date DESC")->execute($data_topics['topic_id']);
 	$comment = $db->database_num_rows($sql_comment);
 	$data_comment = $db->database_fetch_array($sql_comment);
-	
+
 	$ex = explode(" ", $data_comment['created_date']);
 	$ex_min = explode("-", $ex[0]);
 	$comment_date = $ex_min[0]."-".$ex_min[1]."-".$ex_min[2]." ".$ex[1];
 	$hits = format_hits($data_topics['hits']);
 	$replies = format_hits($comment);
-	
+
 	if ($comment > 0){
 		$comment_date = $comment_date."<br>by <a href='profile-$user[member_id]-$user[username].html' class='blue'>$user[username]</a>";
 		$stat = "Replies: $replies<br>Views: <b>$hits</b>";
