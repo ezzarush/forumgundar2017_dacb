@@ -17,10 +17,10 @@ $mode               = $_POST['mode'];
  
 
 if($mode==0){
-	$query = "INSERT INTO as_users (username,password,full_name,email,phone,level,blocked,created_date,created_userid) VALUES ('$pengguna_username','$pengguna_password','$pengguna_fullname','$pengguna_email','$pengguna_phone','$pengguna_level','$pengguna_blocked','$date','$userid')";
+	$query = "INSERT INTO as_admin (username,password,full_name,email,phone,level,blocked,created_date,created_userid) VALUES ('$pengguna_username','$pengguna_password','$pengguna_fullname','$pengguna_email','$pengguna_phone','$pengguna_level','$pengguna_blocked','$date','$userid')";
 	$db->database_prepare($query)->execute();
 }else{
-	$query = "UPDATE as_users SET username='$pengguna_username', password='$pengguna_password', full_name='$pengguna_fullname', email='$pengguna_email', phone='$pengguna_phone',  level='$pengguna_level', blocked='$pengguna_blocked',modified_date='$date', modified_userid='$userid' WHERE user_id='$mode'";
+	$query = "UPDATE as_admin SET username='$pengguna_username', password='$pengguna_password', full_name='$pengguna_fullname', email='$pengguna_email', phone='$pengguna_phone',  level='$pengguna_level', blocked='$pengguna_blocked',modified_date='$date', modified_userid='$userid' WHERE admin_id='$mode'";
 	$db->database_prepare($query)->execute();
 }
 header('Location: '.$app_path.'pengguna');

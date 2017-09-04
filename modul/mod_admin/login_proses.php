@@ -8,7 +8,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 //check ke database
-$sql_topic = $db->database_prepare("SELECT * FROM as_users WHERE username='$username' AND password='$password'")->execute();
+$sql_topic = $db->database_prepare("SELECT * FROM as_admin WHERE username='$username' AND password='$password'")->execute();
 $dt_topic = $db->database_fetch_array($sql_topic);
 
 if(empty($dt_topic)){

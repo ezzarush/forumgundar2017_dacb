@@ -17,12 +17,12 @@ if(isset($_SESSION["isLogin"])){
         include('formPengguna.php');    
     }else if($mode=='edit'){
         $id = $_GET['id'];
-        $sql_topic  = $db->database_prepare("SELECT * FROM as_users WHERE user_id='$id'")->execute();
+        $sql_topic  = $db->database_prepare("SELECT * FROM as_admin WHERE admin_id='$id'")->execute();
         $data = $db->database_fetch_array($sql_topic);
         include('formPengguna.php');
     }else{
         //Get All Kategori
-        $sql_topic  = $db->database_prepare("SELECT * FROM as_users ORDER BY user_id DESC")->execute();
+        $sql_topic  = $db->database_prepare("SELECT * FROM as_admin ORDER BY admin_id DESC")->execute();
         include('daftarPengguna.php');
     }
     //Footer
