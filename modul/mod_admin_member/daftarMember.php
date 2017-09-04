@@ -32,7 +32,8 @@
                     <th class="sorting_asc" aria-controls="example1" aria-sort="ascending">No.</th>
                     <th class="sorting" aria-controls="example1" aria-label="Browser: activate to sort column ascending">Username</th>
                     <th class="sorting" aria-controls="example1" aria-label="Platform(s): activate to sort column ascending">Nama Lengkap</th>
-                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">E-Mail Jurusan</th>
+                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">E-Mail</th>
+					<th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Jurusan</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Tahun Lulus</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Alamat</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">No.Telp</th>
@@ -51,6 +52,7 @@
                       <td><?=$row['username'];?></td>
                       <td><?=$row['first_name'].' '.$row['last_name'];?></td>
                       <td><?=$row['email'];?></td>
+                      <td><?=$row['jurusan'];?></td>
                       <td><?=$row['tahun_lulus'];?></td>
                       <td><?=$row['address'];?></td>
                       <td><?=$row['cellphone'];?></td>
@@ -66,7 +68,8 @@
                     <th class="sorting_asc" aria-controls="example1" aria-sort="ascending">No.</th>
                     <th class="sorting" aria-controls="example1" aria-label="Browser: activate to sort column ascending">Username</th>
                     <th class="sorting" aria-controls="example1" aria-label="Platform(s): activate to sort column ascending">Nama Lengkap</th>
-                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">E-Mail Jurusan</th>
+                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">E-Mail</th>
+                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Jurusan</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Tahun Lulus</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Alamat</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">No.Telp</th>
