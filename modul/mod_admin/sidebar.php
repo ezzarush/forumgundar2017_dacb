@@ -5,7 +5,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?=$app_path.'css/template/';?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="<?=$app_path.'images/';?>user.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Administrator</p>

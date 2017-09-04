@@ -62,11 +62,14 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                    <th class="sorting_asc" aria-controls="example1" aria-sort="ascending">No.</th>
                     <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Action</th>
+                    <th class="sorting_asc" aria-controls="example1" aria-sort="ascending">No.</th>
                     <th class="sorting" aria-controls="example1" aria-label="Browser: activate to sort column ascending">Username</th>
-                    <th class="sorting" aria-controls="example1" aria-label="Platform(s): activate to sort column ascending">Password</th>
-                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Status</th>
+                    <th class="sorting" aria-controls="example1" aria-label="Platform(s): activate to sort column ascending">Nama Lengkap</th>
+                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">E-Mail Jurusan</th>
+                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Tahun Lulus</th>
+                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">Alamat</th>
+                    <th class="sorting" aria-controls="example1" aria-label="CSS grade: activate to sort column ascending">No.Telp</th>
                 </tr>
                 </tfoot>
               </table></div></div></div>
