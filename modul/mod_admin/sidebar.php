@@ -68,6 +68,12 @@
             <li><a href="<?=$app_path.'pengguna';?>"><i class="fa fa-circle-o"></i> Daftar Pengguna</a></li>
           </ul>
         </li>
+		
+		<li class="treeview">
+          <a href="<?=$app_path.'member';?>">
+            <i class="fa fa-users"></i> <span>Manajemen Member</span>
+          </a>
+        </li>
         
         <li><a href="#"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         
