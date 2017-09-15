@@ -27,10 +27,13 @@ else{
 			$full_url = full_url();
 			if (strpos($full_url, "?suc=ok") == TRUE){
 				echo "<div class='messagesuccess' style='width: auto;'><p><b>Your profile is successfully updated.</b></p></div>";
+			}else if(strpos($full_url, "?suc=pass-ok") == TRUE){
+				echo "<div class='messagesuccess' style='width: auto;'><p><b>Your password is successfully change, please re-login.</b></p></div>";
 			}
 			?>
 			<p>Tambah fotomu biar temanmu tau siapa kamu...</p>
-			<a href="edit_profile.html"><button type="button" class="btn btn-info">EDIT PROFILE</button></a>
+			<a href="edit_profile.html"><button type="button" class="btn btn-info" style="color:#fff;">EDIT PROFILE</button></a>
+			<a href="ubah_password.html"><button type="button" class="btn btn-info" style="color:#fff;">UBAH PASSWORD</button></a>
 			<br><br>
 			<table width="100%">
 				<tr valign="top">

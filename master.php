@@ -295,7 +295,14 @@ $des_image = "";
 
 
 <!-- detail post -->
-<div <?=$_GET['module']=='all-categories'?'class="kotak2"':'class="kotak"';?>>
+<?php
+if($_GET['module']=='sign_in' || $_GET['module']=='sign_out'){
+	echo '<div class="kotak">';
+}else{
+	echo '<div class="kotak2">';
+}
+?>
+
 	<?php if ($_GET['module'] != 'detail-post'): ?>
 
 	<?php endif ?>

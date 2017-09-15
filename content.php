@@ -79,6 +79,10 @@ else{
 	elseif ($_GET['module'] == 'edit_profile'){
 		include "modul/mod_profile/edit_profile.php";
 	}
+	
+	elseif ($_GET['module'] == 'ubah_password'){
+		include "modul/mod_profile/ubah_password.php";
+	}
 
 	elseif ($_GET['module'] == 'profile_member'){
 		include "modul/mod_profile/profile_member.php";
