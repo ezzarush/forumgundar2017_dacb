@@ -99,10 +99,6 @@
 <p style='font-size: 18px; font-weight: bold;'>Daftar</p>
 <table border="0" width="100%" bgcolor="#eae7e7" height="450">
 	<tr>
-		<td style="padding: 20px;" width="45%" align="center">
-			<div class="well"><br><br><br>Its Fast - Free - Fun<br><br><br><br></div>
-		</td>
-		<td align="center"><font color="#666">or</font> <br><div style="border-left: 1px solid rgba(0, 0, 0, 0.1); border-right: 1px solid rgba(255, 255, 255, 0.8); display: inline;"></div></td>
 		<td valign="middle" style="padding: 20px; padding-top: 50px;">
 			<?php
 			$full_url = full_url();
@@ -111,20 +107,20 @@
 			}
 			?>
 			<form method="POST" id="frm_sign_up" action="action_sign_up.php" class="form-group">
-				<div class="form-group">
+				<div class="form-group" style="padding-left:350px;padding-right:350px;">
 					<label for="email">Username</label>
 					<input  class="form-control" type="text" id="username" class="required" placeholder="Username" name="username">
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="padding-left:350px;padding-right:350px;">
 					<label for="email">Email</label>
 					<input  class="form-control" type="text" id="email" class="required" placeholder="email" name="email" >
 				</div>
-				<div class="form-group">
+				<div class="form-group" style="padding-left:350px;padding-right:350px;">
 					<label for="password1">Password</label>
 					<input  class="form-control" type="password" id="password1" class="required" placeholder="password" name="password" >
 				</div>
-				<div>
-					<input type="submit" class="btn btn-info" value="Daftar" id="buttonSignup">
+				<div align="center">
+					<input type="submit" style="color:white;" class="btn btn-info" value="Daftar" id="buttonSignup">
 				</div>
 			</form>
 			<br>
