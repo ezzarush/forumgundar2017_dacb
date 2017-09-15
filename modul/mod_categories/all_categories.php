@@ -1,5 +1,5 @@
 <div class="page-header">
-  <center>
+  <center style="color:white;">
     <h1 style="padding-top: -10px">Kategori Forum</h1>
   </center>
 </div>
