@@ -43,12 +43,15 @@ $des_image = "";
 
 	<!-- Homepage Specific Elements -->
 	<script type="text/javascript" src="js/icheck.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1-9/jquery.min.js"></script>
 	<script type="text/javascript" src="js/mod.js"></script>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+	
+	<!--
+		<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+	-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<!--End Homepage Specific Elements -->
 
 	<style type="text/css">
@@ -297,10 +300,10 @@ $des_image = "";
 <footer>
 	<div id="copyright" class="clear">
 		Coded with love by <strong><a href="http://jiwantoko.com">jiwantoko</a></strong>
-		<a href="#" class="pull-right alert-link" style="padding: 0px 5px">Bantuan</a>
-		<a href="#" class="pull-right alert-link" style="padding: 0px 5px">Tentang</a>
-		<a href="#" class="pull-right alert-link" style="padding: 0px 5px">Hubungi Kami</a>
-		<a href="#" class="pull-right alert-link" style="padding: 0px 5px">Syarat dan Ketentuan</a>
+		<a href="<?=$app_path;?>bantuan.html" class="pull-right alert-link" style="padding: 0px 5px">Bantuan</a>
+		<a href="<?=$app_path;?>tentang.html" class="pull-right alert-link" style="padding: 0px 5px">Tentang</a>
+		<a href="<?=$app_path;?>hubungi-kami.html" class="pull-right alert-link" style="padding: 0px 5px">Hubungi Kami</a>
+		<a href="<?=$app_path;?>syarat-ketentuan.html" class="pull-right alert-link" style="padding: 0px 5px">Syarat dan Ketentuan</a>
 	</div>
 </footer>
 </div>

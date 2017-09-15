@@ -3,9 +3,6 @@ include('../../config/class_database.php');
 include('../../config/serverconfig.php');
 session_start();
 
-//print_r($_SESSION);
-//$_SESSION["isLogin"] = TRUE;
-
 if(isset($_SESSION["isLogin"])){
     //Header
     include('header.php');

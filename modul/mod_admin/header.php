@@ -31,6 +31,9 @@
   <link rel="stylesheet" href="<?=$app_path.'css/template/';?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="<?=$app_path.'css/template/';?>plugins/datatables/dataTables.bootstrap.css">
+  <!-- Froala Text Editor -->
+  <link rel="stylesheet" href="<?=$app_path.'css/';?>froala_editor.pkgd.css">
+  <link rel="stylesheet" href="<?=$app_path.'css/';?>froala_style.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

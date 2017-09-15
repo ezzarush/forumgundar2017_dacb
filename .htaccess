@@ -8,6 +8,10 @@ RewriteRule ^topic\.html$ master.php?module=topic [L]
 RewriteRule ^detail-(.*)-(.*)\.html$ master.php?module=detail-post&id=$1 [L]
 RewriteRule ^cat-detail-(.*)-(.*)-(.*)-(.*)\.html$ master.php?module=cat_detail&id=$1&cat=$2&page=$3&nm=$4 [L]
 RewriteRule ^all-categories\.html$ master.php?module=all-categories [L]
+RewriteRule ^tentang\.html$ master.php?module=tentang [L]
+RewriteRule ^bantuan\.html$ master.php?module=bantuan [L]
+RewriteRule ^hubungi-kami\.html$ master.php?module=hubungikami [L]
+RewriteRule ^syarat-ketentuan\.html$ master.php?module=syarat-ketentuan [L]
 RewriteRule ^all-posts\.html$ master.php?module=all-posts [L]
 RewriteRule ^sign-up\.html$ master.php?module=sign_up [L]
 RewriteRule ^sign-in\.html$ master.php?module=sign_in [L]
@@ -45,6 +49,25 @@ RewriteRule ^pengguna/tambahPengguna$ modul/mod_admin_pengguna/pengguna.php?mode
 RewriteRule ^member$ modul/mod_admin_member/member.php?mode=list [L]
 RewriteRule ^member/editMember/(.*)$ modul/mod_admin_member/member.php?mode=edit&id=$1 [L]
 RewriteRule ^member/tambahMember$ modul/mod_admin_member/member.php?mode=add [L]
+
+
+#ADMIN HALAMAN TENTANG
+RewriteRule ^halaman/tentang$ modul/mod_admin_halaman/tentang/tentang.php [L]
+RewriteRule ^halaman/editTentang/(.*)$ modul/mod_admin_halaman/tentang/tentang.php?mode=edit&id=$1 [L]
+RewriteRule ^halaman/tambahTentang$ modul/mod_admin_halaman/tentang/tentang.php?mode=add [L]
+
+#ADMIN HALAMAN BANTUAN
+RewriteRule ^halaman/bantuan$ modul/mod_admin_halaman/bantuan/bantuan.php?mode=list [L]
+RewriteRule ^halaman/editBantuan/(.*)$ modul/mod_admin_halaman/bantuan/bantuan.php?is_edit=$1 [L]
+
+#ADMIN HALAMAN HUBUNGI KAMI
+RewriteRule ^halaman/hubungikami$ modul/mod_admin_halaman/hubungi-kami/hubungi-kami.php?mode=list [L]
+RewriteRule ^halaman/edit-hubungi-kami/(.*)$ modul/mod_admin_halaman/hubungi-kami/hubungi-kami.php?mode=edit&id=$1 [L]
+
+#ADMIN HALAMAN SYARAT DAN KETENTUAN
+RewriteRule ^halaman/syarat-ketentuan$ modul/mod_admin_halaman/syarat-ketentuan/syarat-ketentuan.php?mode=list [L]
+RewriteRule ^halaman/edit-syarat-ketentuan/(.*)$ modul/mod_admin_halaman/syarat-ketentuan/syarat-ketentuan.php?mode=edit&id=$1 [L]
+RewriteRule ^halaman/tambah-syarat-ketentuan$ modul/mod_admin_halaman/syarat-ketentuan/syarat-ketentuan.php?mode=add [L]
 
 Options All -Indexes
 </IfModule>

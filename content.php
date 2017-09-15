@@ -28,6 +28,29 @@ else{
 	elseif ($_GET['module'] == 'all-categories'){
 		include "modul/mod_categories/all_categories.php";
 	}
+	
+	elseif ($_GET['module'] == 'tentang'){
+		$sql_topic  = $db->database_prepare("SELECT * FROM as_halaman_tentang")->execute();
+		$data 		= $db->database_fetch_array($sql_topic);
+		include "modul/mod_tentang/tentang.php";
+	}
+	
+	elseif ($_GET['module'] == 'bantuan'){
+		$sql_topic  = $db->database_prepare("SELECT * FROM as_halaman_bantuan")->execute();
+		include "modul/mod_bantuan/bantuan.php";
+	}
+	
+	elseif ($_GET['module'] == 'hubungikami'){
+		$sql_topic  = $db->database_prepare("SELECT * FROM as_halaman_hubungikami")->execute();
+		$data 		= $db->database_fetch_array($sql_topic);
+		include "modul/mod_hubungikami/hubungikami.php";
+	}
+	
+	elseif ($_GET['module'] == 'syarat-ketentuan'){
+		$sql_topic  = $db->database_prepare("SELECT * FROM as_halaman_syaratketentuan")->execute();
+		$data 		= $db->database_fetch_array($sql_topic);
+		include "modul/mod_syaratketentuan/syaratketentuan.php";
+	}
 
 	elseif ($_GET['module'] == 'all-posts'){
 		include "modul/mod_posts/all_posts.php";

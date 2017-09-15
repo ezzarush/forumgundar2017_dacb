@@ -74,6 +74,21 @@
             <i class="fa fa-users"></i> <span>Manajemen Member</span>
           </a>
         </li>
+		
+		<li class="treeview">
+          <a href="#">
+            <i class="fa fa-desktop"></i> <span>Manajemen Halaman</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?=$app_path.'halaman/tentang';?>"><i class="fa fa-circle-o"></i> Tentang</a></li>
+            <li><a href="<?=$app_path.'halaman/bantuan';?>"><i class="fa fa-circle-o"></i> Bantuan</a></li>
+            <li><a href="<?=$app_path.'halaman/hubungikami';?>"><i class="fa fa-circle-o"></i> Hubungi Kami</a></li>
+            <li><a href="<?=$app_path.'halaman/syarat-ketentuan';?>"><i class="fa fa-circle-o"></i> Syarat &amp; Ketentuan</a></li>
+          </ul>
+        </li>
         
         <li><a href="#"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         

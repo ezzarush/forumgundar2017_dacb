@@ -237,10 +237,15 @@
 <!-- DataTables -->
 <script src="<?=$app_path.'css/template/';?>plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?=$app_path.'css/template/';?>plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script src="<?=$app_path.'js/';?>froala_editor.pkgd.min.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable();
     
+	$(function() {
+		$('#textarea').froalaEditor()
+	  });
+	
     $(document).ready(function(){
         function hapusKategory(){
             alert("ea");
