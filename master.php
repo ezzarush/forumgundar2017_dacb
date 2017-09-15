@@ -296,7 +296,7 @@ $des_image = "";
 
 <!-- detail post -->
 <?php
-if($_GET['module']=='sign_in' || $_GET['module']=='sign_out'){
+if($_GET['module']=='sign_in' || $_GET['module']=='sign_up'){
 	echo '<div class="kotak">';
 }else{
 	echo '<div class="kotak2">';
