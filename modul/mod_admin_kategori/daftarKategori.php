@@ -86,7 +86,8 @@
             var x = confirm("Delete Category "+param+"?");
             if(x){
                 $.post("<?=$app_path.'modul/mod_admin_kategori/hapusKategori_act.php';?>",{id:param}).success(function(param){
-                    console.log(param);
+					alert("Hapus Kategori Berhasil");
+                    location.reload();
                 })   
             }
         }
