@@ -108,7 +108,7 @@ $des_image = "";
 		.kotak {
 			margin: 10px 0px;
 			padding: 10px;
-		    background-color: #fff;
+		    background-color: #3498db;
 		    border-color: #ddd;
 		    border-width: 1px;
 		    border-radius: 4px;

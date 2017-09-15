@@ -1,5 +1,4 @@
-<p style='font-size: 18px; font-weight: bold;'>LOGIN</p>
-<table border="0" width="100%" bgcolor="#eae7e7" height="350">
+<table border="0" width="100%" height="350">
 	<tr>
 		
 		<td valign="top" style="padding: 20px; padding-top: 50px;">
@@ -17,17 +16,26 @@
 				echo "<input type='hidden' name='iden' value='1'>";
 			}
 			?>
-				<div class="form-group" style="padding-left:350px;padding-right:350px;">
-					<label for="email">Alamat Email</label>
-					<input type="email" class="form-control" id="email" placeholder="Email" name="email" title="Email tidak boleh kosong!">
+			
+				<div class="panel panel-primary" style="margin-left:280px;margin-right:280px;">
+				  <div class="panel-heading">
+					<h3 class="panel-title">LOGIN</h3>
+				  </div>
+				  <div class="panel-body">
+					<div class="form-group">
+						<label for="email">Alamat Email</label>
+						<input type="email" class="form-control" id="email" placeholder="Email" name="email" title="Email tidak boleh kosong!">
+					</div>
+					<div class="form-group" >
+						<label for="password">Password</label>
+						<input type="password" class="form-control" id="password" placeholder="Password" name="password" title="Email tidak boleh kosong!">
+					</div>
+					<div align="center">
+						<input type="submit" style="color:white;" class="btn btn-info" value="Login" id="buttonSignin">
+					</div>
+				  </div>
 				</div>
-				<div class="form-group" style="padding-left:350px;padding-right:350px;">
-					<label for="password">Password</label>
-					<input type="password" class="form-control" id="password" placeholder="Password" name="password" title="Email tidak boleh kosong!">
-				</div>
-				<div align="center">
-					<input type="submit" style="color:white;" class="btn btn-info" value="Login" id="buttonSignin">
-				</div>
+				
 			</form>
 			<br>
 		</td>

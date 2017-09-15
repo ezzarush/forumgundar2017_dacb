@@ -96,7 +96,7 @@
 	});
 </script>
 
-<p style='font-size: 18px; font-weight: bold;'>Daftar</p>
+
 <table border="0" width="100%" bgcolor="#eae7e7" height="450">
 	<tr>
 		<td valign="middle" style="padding: 20px; padding-top: 50px;">
@@ -107,21 +107,32 @@
 			}
 			?>
 			<form method="POST" id="frm_sign_up" action="action_sign_up.php" class="form-group">
-				<div class="form-group" style="padding-left:350px;padding-right:350px;">
-					<label for="email">Username</label>
-					<input  class="form-control" type="text" id="username" class="required" placeholder="Username" name="username">
+				
+				<div class="panel panel-primary" style="margin-left:280px;margin-right:280px;">
+				  <div class="panel-heading">
+					<h3 class="panel-title">LOGIN</h3>
+				  </div>
+				  <div class="panel-body">
+					
+					<div class="form-group" >
+						<label for="email">Username</label>
+						<input  class="form-control" type="text" id="username" class="required" placeholder="Username" name="username">
+					</div>
+					<div class="form-group" >
+						<label for="email">Email</label>
+						<input  class="form-control" type="text" id="email" class="required" placeholder="email" name="email" >
+					</div>
+					<div class="form-group" >
+						<label for="password1">Password</label>
+						<input  class="form-control" type="password" id="password1" class="required" placeholder="password" name="password" >
+					</div>
+					<div align="center">
+						<input type="submit" style="color:white;" class="btn btn-info" value="Daftar" id="buttonSignup">
+					</div>
+					
+				  </div>
 				</div>
-				<div class="form-group" style="padding-left:350px;padding-right:350px;">
-					<label for="email">Email</label>
-					<input  class="form-control" type="text" id="email" class="required" placeholder="email" name="email" >
-				</div>
-				<div class="form-group" style="padding-left:350px;padding-right:350px;">
-					<label for="password1">Password</label>
-					<input  class="form-control" type="password" id="password1" class="required" placeholder="password" name="password" >
-				</div>
-				<div align="center">
-					<input type="submit" style="color:white;" class="btn btn-info" value="Daftar" id="buttonSignup">
-				</div>
+				
 			</form>
 			<br>
 		</td>
