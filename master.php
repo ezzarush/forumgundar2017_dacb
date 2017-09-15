@@ -115,6 +115,17 @@ $des_image = "";
 		    -webkit-box-shadow: none;
 		    box-shadow: none;
 		}
+		
+		.kotak2 {
+			margin: 10px 0px;
+			padding: 10px;
+		    background-color: #fff;
+		    border-color: #ddd;
+		    border-width: 1px;
+		    border-radius: 4px;
+		    -webkit-box-shadow: none;
+		    box-shadow: none;
+		}
 
 		#pageshare {position:fixed; top:35%; left:10px; float:left; border: 1px solid #CCCCCC; border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#eff3fa;padding:0 0 2px 0;z-index:10;}
 
@@ -284,7 +295,7 @@ $des_image = "";
 
 
 <!-- detail post -->
-<div class="kotak">
+<div <?=$_GET['module']=='all-categories'?'class="kotak2"':'class="kotak"';?>>
 	<?php if ($_GET['module'] != 'detail-post'): ?>
 
 	<?php endif ?>
