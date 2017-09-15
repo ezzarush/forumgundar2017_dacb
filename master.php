@@ -302,7 +302,9 @@ $des_image = "";
 		Coded with love by <strong><a href="http://jiwantoko.com">jiwantoko</a></strong>
 		<a href="<?=$app_path;?>bantuan.html" class="pull-right alert-link" style="padding: 0px 5px">Bantuan</a>
 		<a href="<?=$app_path;?>tentang.html" class="pull-right alert-link" style="padding: 0px 5px">Tentang</a>
-		<a href="<?=$app_path;?>hubungi-kami.html" class="pull-right alert-link" style="padding: 0px 5px">Hubungi Kami</a>
+		<!--
+			<a href="<?=$app_path;?>hubungi-kami.html" class="pull-right alert-link" style="padding: 0px 5px">Hubungi Kami</a>
+		-->
 		<a href="<?=$app_path;?>syarat-ketentuan.html" class="pull-right alert-link" style="padding: 0px 5px">Syarat dan Ketentuan</a>
 	</div>
 </footer>

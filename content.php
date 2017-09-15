@@ -32,6 +32,10 @@ else{
 	elseif ($_GET['module'] == 'tentang'){
 		$sql_topic  = $db->database_prepare("SELECT * FROM as_halaman_tentang")->execute();
 		$data 		= $db->database_fetch_array($sql_topic);
+		
+		//hubungi kami
+		$sql_topic  = $db->database_prepare("SELECT * FROM as_halaman_hubungikami")->execute();
+		$data2 		= $db->database_fetch_array($sql_topic);
 		include "modul/mod_tentang/tentang.php";
 	}
 	
